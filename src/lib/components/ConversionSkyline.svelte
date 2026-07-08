@@ -93,7 +93,7 @@
 						{#if b.group === 'hero' && annotate}
 							<div class="annotation" transition:fade={{ duration: 300 }}>
 								<p>
-									this tower — the old <strong>Pfizer HQ</strong>, known since this morning as
+									this is the old <strong>Pfizer HQ</strong>. since this morning,
 									<strong>“the building that might collapse”</strong>
 								</p>
 								<svg viewBox="0 0 130 90" aria-hidden="true">
@@ -104,7 +104,7 @@
 						{/if}
 						{#if b.group === 'hero' && step === 5}
 							<div class="buckle" style:bottom="{BUCKLE_FRAC * b.h * k}px">
-								<span>beam compromised — 21st floor</span>
+								<span>21st floor: compromised beam</span>
 							</div>
 						{/if}
 					</div>

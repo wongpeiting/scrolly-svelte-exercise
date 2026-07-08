@@ -21,10 +21,10 @@ CAST = [
     ("17171", {"year": 1928, "floors": 38, "height_ft": 495, "uses": "residential",          "group": "downtown"}),  # 20 Pine
     ("231",   {"year": 1931, "floors": 57, "height_ft": 748, "uses": "office (converted)",   "group": "downtown"}),  # 20 Exchange (748 = antenna; 846 was never-built "intended height")
     ("131",   {"year": 1932, "floors": 67, "height_ft": 952, "uses": "mixed, incl. residential", "group": "downtown"}),  # 70 Pine
-    ("10262", {"year": 1958, "floors": 34, "height_ft": 436, "uses": "office → 680 apts (2029)", "group": "midtown"},),  # 750 Third
-    ("7409",  {"year": 1988, "floors": 31, "height_ft": 430, "uses": "office → residential", "group": "midtown"}),  # 135 E 57th
-    ("5279",  {"year": 2002, "floors": 40, "height_ft": 574, "uses": "office → residential", "group": "midtown"}),  # 5 Times Sq
-    ("42701", {"year": 1961, "floors": 33, "height_ft": 409, "uses": "office → ~1,600 apts", "group": "hero"}),      # Pfizer / 235 E 42nd
+    ("10262", {"year": 1958, "floors": 34, "height_ft": 436, "uses": "office to 680 apartments (2029)", "group": "midtown"},),  # 750 Third
+    ("7409",  {"year": 1988, "floors": 31, "height_ft": 430, "uses": "office to residential", "group": "midtown"}),  # 135 E 57th
+    ("5279",  {"year": 2002, "floors": 40, "height_ft": 574, "uses": "office to residential", "group": "midtown"}),  # 5 Times Sq
+    ("42701", {"year": 1961, "floors": 33, "height_ft": 409, "uses": "office to about 1,600 apartments", "group": "hero"}),      # Pfizer / 235 E 42nd
 ]
 
 with open(CSV, encoding="utf-8") as f:
