@@ -60,7 +60,8 @@
 					<p>
 						Then the pandemic emptied Midtown, and the city rewrote its rules to fill it: looser
 						zoning, a tax break, an office at City Hall to hurry conversions along. Half the
-						projects announced since are in Midtown, and they keep getting bigger.
+						projects announced since are in Midtown, according to a Wall Street Journal analysis of
+						Cushman & Wakefield data, and they keep getting bigger.
 					</p>
 				</div>
 			</div>
