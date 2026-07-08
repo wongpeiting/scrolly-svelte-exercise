@@ -7,21 +7,23 @@
 </script>
 
 <main>
-	<header class="masthead">
-		<h1>The conversion that reached too high</h1>
-		<p class="dek">
-			New York has spent two decades turning empty offices into apartments — in ever bigger
-			buildings. On July 7, its most ambitious conversion yet began to buckle.
-		</p>
-		<p class="hint">Scroll ↓</p>
-	</header>
-
 	<Scroller top={0} bottom={1} bind:index bind:count>
 		{#snippet background()}
 			<ConversionSkyline {index} />
 		{/snippet}
 
 		{#snippet foreground()}
+			<div class="step headline-step">
+				<header class="masthead">
+					<h1>The conversion that reached too high</h1>
+					<p class="dek">
+						New York has spent two decades turning empty offices into apartments — in ever bigger
+						buildings. On July 7, its most ambitious conversion yet began to buckle.
+					</p>
+					<p class="hint">Scroll ↓</p>
+				</header>
+			</div>
+
 			<div class="step">
 				<div class="card">
 					<h2>The buckle</h2>
@@ -87,36 +89,8 @@
 
 <style>
 	main {
-		font-family: Georgia, 'Times New Roman', serif;
+		font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
 		color: #26241f;
-	}
-
-	.masthead {
-		max-width: 42rem;
-		margin: 0 auto;
-		padding: 5rem 1.5rem 4rem;
-		text-align: center;
-	}
-
-	h1 {
-		margin: 0 0 1rem;
-		font-size: clamp(2rem, 5vw, 3rem);
-		line-height: 1.1;
-	}
-
-	.dek {
-		margin: 0 auto;
-		max-width: 34rem;
-		font-size: 1.15rem;
-		line-height: 1.5;
-		color: #55524b;
-	}
-
-	.hint {
-		margin-top: 2.5rem;
-		font-family: system-ui, sans-serif;
-		font-size: 0.8rem;
-		color: #8a857c;
 	}
 
 	.step {
@@ -125,6 +99,45 @@
 		align-items: center;
 		justify-content: flex-start;
 		padding: 0 clamp(1rem, 6vw, 5rem);
+	}
+
+	.headline-step {
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	.masthead {
+		max-width: 24rem;
+		padding: 1.25rem 1.5rem;
+		text-align: left;
+		background: rgb(245 242 236 / 0.7);
+		backdrop-filter: blur(2px);
+		border-radius: 0.5rem;
+	}
+
+	h1 {
+		margin: 0 0 1rem;
+		font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+		font-weight: 700;
+		line-height: 1.08;
+		letter-spacing: -0.01em;
+	}
+
+	.dek {
+		margin: 0;
+		max-width: 22rem;
+		font-size: 1.1rem;
+		line-height: 1.55;
+		color: #55524b;
+	}
+
+	.hint {
+		margin: 2rem 0 0;
+		font-family: 'Libre Franklin', system-ui, sans-serif;
+		font-size: 0.8rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: #8a857c;
 	}
 
 	.card {
@@ -138,7 +151,10 @@
 
 	.card h2 {
 		margin: 0 0 0.6rem;
-		font-size: 1.15rem;
+		font-family: 'Libre Franklin', system-ui, sans-serif;
+		font-size: 1.05rem;
+		font-weight: 700;
+		letter-spacing: 0.01em;
 	}
 
 	.card p {
@@ -154,7 +170,7 @@
 	}
 
 	.sources p {
-		font-family: system-ui, sans-serif;
+		font-family: 'Libre Franklin', system-ui, sans-serif;
 		font-size: 0.75rem;
 		line-height: 1.5;
 		color: #8a857c;
