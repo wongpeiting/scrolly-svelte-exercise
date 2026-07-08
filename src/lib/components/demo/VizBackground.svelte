@@ -72,11 +72,7 @@
 		<svg viewBox="0 0 {width} {height}" preserveAspectRatio="none">
 			<!-- y axis -->
 			{#each yScale.ticks(5) as tick (`${metric}-${tick}`)}
-				<g
-					class="tick"
-					transform="translate(0,{yScale(tick)})"
-					transition:fade={{ duration: 250 }}
-				>
+				<g class="tick" transform="translate(0,{yScale(tick)})" transition:fade={{ duration: 250 }}>
 					<line x1={margin.left} x2={width - margin.right} />
 					<text x={margin.left - 8} text-anchor="end" dominant-baseline="middle">{tick}</text>
 				</g>
@@ -126,7 +122,7 @@
 		height: 100vh;
 		box-sizing: border-box;
 		font-family: system-ui, sans-serif;
-        padding: 2rem;
+		padding: 2rem;
 	}
 
 	.chart {

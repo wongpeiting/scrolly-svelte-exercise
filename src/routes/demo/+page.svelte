@@ -14,8 +14,8 @@
 	<section class="demo">
 		<h1>Components demo</h1>
 		<p class="intro">
-			Start with simple props, then pass markup into a component with snippets, then combine both
-			in a more advanced component.
+			Start with simple props, then pass markup into a component with snippets, then combine both in
+			a more advanced component.
 		</p>
 	</section>
 

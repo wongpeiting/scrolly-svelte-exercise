@@ -29,9 +29,8 @@
 						Just before 8 a.m. on Tuesday, a safety manager at 235 East 42nd Street — the former
 						Pfizer headquarters, built in 1961 — reported a compromised steel beam on the 21st
 						floor. Two support columns were buckling; upper floors sagged. The tower was
-						mid-conversion into some 1,600 apartments, the largest office-to-residential
-						conversion in New York City history. A five-block "frozen zone" went up around
-						Grand Central.
+						mid-conversion into some 1,600 apartments, the largest office-to-residential conversion
+						in New York City history. A five-block "frozen zone" went up around Grand Central.
 					</p>
 				</div>
 			</div>
@@ -40,11 +39,11 @@
 				<div class="card">
 					<h2>It began downtown, old and narrow</h2>
 					<p>
-						Office-to-apartment conversion isn't new. The first wave, in the 1990s and 2000s,
-						took pre-war towers in Lower Manhattan — 90 West Street (1907), the Woolworth
-						Building (1913), 20 Pine (1928), 20 Exchange Place (1931), 70 Pine (1932). Old,
-						narrow buildings whose slim floor plates put every future bedroom near a window.
-						Most now list "residential" among their uses.
+						Office-to-apartment conversion isn't new. The first wave, in the 1990s and 2000s, took
+						pre-war towers in Lower Manhattan — 90 West Street (1907), the Woolworth Building
+						(1913), 20 Pine (1928), 20 Exchange Place (1931), 70 Pine (1932). Old, narrow buildings
+						whose slim floor plates put every future bedroom near a window. Most now list
+						"residential" among their uses.
 					</p>
 				</div>
 			</div>
@@ -54,10 +53,10 @@
 					<h2>The new wave: Midtown, and bigger</h2>
 					<p>
 						After the pandemic emptied offices, the city rewrote the rules — 2024's City of Yes
-						rezoning, a new 467-m tax break, and an "Office Conversion Accelerator" at City
-						Hall. Half of conversions announced since then are in Midtown, and the buildings
-						keep getting bigger: 5 Times Square, 135 East 57th, and 750 Third Avenue, a
-						34-story office slab set to become 680 apartments.
+						rezoning, a new 467-m tax break, and an "Office Conversion Accelerator" at City Hall.
+						Half of conversions announced since then are in Midtown, and the buildings keep getting
+						bigger: 5 Times Square, 135 East 57th, and 750 Third Avenue, a 34-story office slab set
+						to become 680 apartments.
 					</p>
 				</div>
 			</div>
@@ -66,12 +65,11 @@
 				<div class="card">
 					<h2>This one reached too high</h2>
 					<p>
-						Unlike every downtown precedent, the 42nd Street project didn't just gut and refit —
-						it added weight: an 11-story extension on the adjoining 219 East 42nd Street, part
-						of the same complex. Under the new load, a union official said, beams bent "like
-						cigarettes." The developer conceded two columns "could not take the load." The
-						columns of a 64-year-old office tower were asked to carry a building it was never
-						designed to be.
+						Unlike every downtown precedent, the 42nd Street project didn't just gut and refit — it
+						added weight: an 11-story extension on the adjoining 219 East 42nd Street, part of the
+						same complex. Under the new load, a union official said, beams bent "like cigarettes."
+						The developer conceded two columns "could not take the load." The columns of a
+						64-year-old office tower were asked to carry a building it was never designed to be.
 					</p>
 				</div>
 			</div>
@@ -80,9 +78,9 @@
 
 	<footer class="sources">
 		<p>
-			Sources: New York Times live coverage, July 7, 2026; Wall Street Journal, "Office-to-Residential
-			Conversions Are Booming," Dec. 1, 2025; NYC Office Conversion Accelerator; building data and
-			scale drawings from SkyscraperPage.com.
+			Sources: New York Times live coverage, July 7, 2026; Wall Street Journal,
+			"Office-to-Residential Conversions Are Booming," Dec. 1, 2025; NYC Office Conversion
+			Accelerator; building data and scale drawings from SkyscraperPage.com.
 		</p>
 	</footer>
 </main>

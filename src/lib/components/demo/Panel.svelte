@@ -1,8 +1,5 @@
 <script>
-	let {
-		title = 'Panel',
-		content
-	} = $props();
+	let { title = 'Panel', content } = $props();
 </script>
 
 <section class="panel">

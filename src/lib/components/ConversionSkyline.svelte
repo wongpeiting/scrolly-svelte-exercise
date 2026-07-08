@@ -43,7 +43,9 @@
 					{#if b.group === 'hero' && step === 3}
 						<div class="schematic" style:height="{(NEIGHBOR_RAW + EXTENSION_RAW) * k}px">
 							<div class="ghost" style:height="{EXTENSION_RAW * k}px">+11 floors</div>
-							<div class="neighbor" style:height="{NEIGHBOR_RAW * k}px">219 E 42nd<br />(adjoining)</div>
+							<div class="neighbor" style:height="{NEIGHBOR_RAW * k}px">
+								219 E 42nd<br />(adjoining)
+							</div>
 						</div>
 					{/if}
 					<div class="tower">
@@ -91,7 +93,9 @@
 		display: flex;
 		align-items: flex-end;
 		gap: 0.4rem;
-		transition: opacity 400ms ease, filter 400ms ease;
+		transition:
+			opacity 400ms ease,
+			filter 400ms ease;
 	}
 
 	.building.dimmed {
