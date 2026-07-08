@@ -104,7 +104,7 @@
 						{#if b.group === 'hero' && annotate}
 							<div class="annotation" transition:fade={{ duration: 300 }}>
 								<p>
-									as of this morning, this <strong>ex-Pfizer HQ</strong> became the
+									as of this morning, this <strong>former Pfizer HQ</strong> became the
 									<strong>‘building that might collapse’</strong>
 								</p>
 								<svg viewBox="0 0 130 90" aria-hidden="true">
