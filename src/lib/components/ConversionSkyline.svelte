@@ -23,10 +23,16 @@
 	const TALLEST = Math.max(...buildings.map((b) => b.h)); // 290px (70 Pine)
 	const k = $derived(containerH > 0 ? (containerH * 0.58) / TALLEST : 0);
 
-	// The hero never unmounts: on the headline screen it renders huge (up close),
-	// then the height transition shrinks it into the shared scale as you scroll.
-	const heroLandingH = $derived(containerH * 0.72);
-	const displayH = (b) => (b.group === 'hero' && landing ? heroLandingH : b.h * k);
+	// The hero never unmounts: huge on the headline screens, shrunk to the shared
+	// scale mid-story, then zoomed back up for the final step so we end on it.
+	const displayH = (b) => {
+		if (b.group !== 'hero') return b.h * k;
+		if (landing) return containerH * 0.72;
+		if (step === 5) return containerH * 0.66;
+		return b.h * k;
+	};
+	// Effective px per raw drawing px, so hero-anchored overlays scale with the zoom.
+	const scaleFor = (b) => displayH(b) / b.h;
 
 	// Slide-4 schematic, same raw-px scale as the drawings:
 	// 219 E 42nd (adjoining): 22 existing floors ≈ 275 ft ≈ 84px; extension +11 floors ≈ 138 ft ≈ 42px
@@ -44,18 +50,23 @@
 	let stageW = $state(0);
 	let shiftX = $state(0);
 
+	function measure() {
+		if (!skylineEl || stageW === 0) return;
+		const actives = skylineEl.querySelectorAll('.building:not(.dimmed)');
+		if (!actives.length) return;
+		let sum = 0;
+		for (const el of actives) sum += el.offsetLeft + el.offsetWidth / 2;
+		shiftX = stageW / 2 - sum / actives.length;
+	}
+
 	$effect(() => {
 		void step;
 		void stageW;
 		void k;
-		tick().then(() => {
-			if (!skylineEl || stageW === 0) return;
-			const actives = skylineEl.querySelectorAll('.building:not(.dimmed)');
-			if (!actives.length) return;
-			let sum = 0;
-			for (const el of actives) sum += el.offsetLeft + el.offsetWidth / 2;
-			shiftX = stageW / 2 - sum / actives.length;
-		});
+		tick().then(measure);
+		// Re-measure after the 700ms height transition settles (hero zoom changes layout).
+		const t = setTimeout(measure, 780);
+		return () => clearTimeout(t);
 	});
 </script>
 
@@ -81,9 +92,9 @@
 					transition:fade={{ duration: 400 }}
 				>
 					{#if b.group === 'hero' && step === 5}
-						<div class="schematic" style:height="{(NEIGHBOR_RAW + EXTENSION_RAW) * k}px">
-							<div class="ghost" style:height="{EXTENSION_RAW * k}px">+11 floors</div>
-							<div class="neighbor" style:height="{NEIGHBOR_RAW * k}px">
+						<div class="schematic" style:height="{(NEIGHBOR_RAW + EXTENSION_RAW) * scaleFor(b)}px">
+							<div class="ghost" style:height="{EXTENSION_RAW * scaleFor(b)}px">+11 floors</div>
+							<div class="neighbor" style:height="{NEIGHBOR_RAW * scaleFor(b)}px">
 								219 E 42nd<br />(adjoining)
 							</div>
 						</div>
@@ -103,7 +114,7 @@
 							</div>
 						{/if}
 						{#if b.group === 'hero' && step === 5}
-							<div class="buckle" style:bottom="{BUCKLE_FRAC * b.h * k}px">
+							<div class="buckle" style:bottom="{BUCKLE_FRAC * displayH(b)}px">
 								<span>21st floor: compromised beam</span>
 							</div>
 						{/if}

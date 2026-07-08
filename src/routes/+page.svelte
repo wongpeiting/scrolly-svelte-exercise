@@ -34,11 +34,12 @@
 				<div class="card">
 					<h2>The buckle</h2>
 					<p>
-						Just before 8 a.m. on Tuesday, a safety manager at 235 East 42nd Street reported a
-						compromised steel beam on the 21st floor. Two support columns were buckling and upper
-						floors sagged. The 1961 tower, once the Pfizer headquarters, was being converted into
-						some 1,600 apartments, the largest office-to-residential conversion in New York City
-						history. A five-block "frozen zone" went up around Grand Central.
+						The first call, just before 8 a.m. on Tuesday, was about falling bricks. The bricks
+						turned out to be fine. The building was not. Inside 235 East 42nd Street, two columns
+						were buckling and the floors above the 21st story had begun to sag. Workers fled, then
+						nine neighboring buildings, then a school of 400 children. The tower, once Pfizer's
+						headquarters, was being turned into 1,600 apartments, the largest office conversion in
+						the city's history.
 					</p>
 				</div>
 			</div>
@@ -47,11 +48,11 @@
 				<div class="card">
 					<h2>It began downtown, old and narrow</h2>
 					<p>
-						The first wave of office conversions, in the 1990s and 2000s, took pre-war towers in
-						Lower Manhattan: 90 West Street (1907), the Woolworth Building (1913), 20 Pine (1928),
-						20 Exchange Place (1931) and 70 Pine (1932). These were old, narrow buildings whose slim
-						floor plates put every future bedroom near a window. Most now list residential among
-						their uses.
+						New York has done this before, but downtown, and smaller. The first wave of conversions
+						in the 1990s and 2000s took the old towers of Lower Manhattan: 90 West Street, the
+						Woolworth Building, 20 Pine, 20 Exchange Place, 70 Pine. All built between 1907 and
+						1932, and narrow enough that every future bedroom sat near a window. The formula held
+						for two decades: pick something old, slim and empty.
 					</p>
 				</div>
 			</div>
@@ -60,11 +61,10 @@
 				<div class="card">
 					<h2>The new wave: Midtown, and bigger</h2>
 					<p>
-						After the pandemic emptied offices, the city rewrote the rules with the 2024 City of Yes
-						rezoning, a new 467-m tax break and an Office Conversion Accelerator at City Hall. Half
-						of the conversions announced since then are in Midtown, and the buildings keep getting
-						bigger: 5 Times Square, 135 East 57th and 750 Third Avenue, a 34-story office slab set
-						to become 680 apartments.
+						Then the pandemic emptied Midtown, and the city rewrote its rules to fill it: looser
+						zoning, a tax break, an office at City Hall to hurry conversions along. Half the
+						projects announced since are in Midtown, and they keep getting bigger. 5 Times Square.
+						135 East 57th. 750 Third Avenue, a 34-story slab that will become 680 apartments.
 					</p>
 				</div>
 			</div>
@@ -73,11 +73,11 @@
 				<div class="card">
 					<h2>This one reached too high</h2>
 					<p>
-						Unlike every downtown precedent, the 42nd Street project added weight: an 11-story
-						extension on the adjoining 219 East 42nd Street, part of the same complex. Under the new
-						load, a union official said, beams bent "like cigarettes". The developer conceded two
+						The 42nd Street project went further than any of them. It added weight: an 11-story
+						extension on the adjoining 219 East 42nd, part of the same complex. On Tuesday, the load
+						told. A union official said beams bent "like cigarettes". The developer admitted two
 						columns "could not take the load". A 64-year-old frame was carrying a building it was
-						never designed to be.
+						never designed to be. Across Manhattan, 25 more conversions are on the drawing board.
 					</p>
 				</div>
 			</div>
