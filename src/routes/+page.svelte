@@ -32,14 +32,13 @@
 
 			<div class="step">
 				<div class="card">
-					<h2>The buckle</h2>
+					<h2>The first call, just before 8 a.m. on Tuesday, was about falling bricks.</h2>
 					<p>
-						The first call, just before 8 a.m. on Tuesday, was about falling bricks. The bricks
-						turned out to be fine. The building was not. Inside 235 East 42nd Street, two columns
-						were buckling and the floors above the 21st story had begun to sag. Workers fled, then
-						nine neighboring buildings, then a school of 400 children. The tower, once Pfizer's
-						headquarters, was being turned into 1,600 apartments, the largest office conversion in
-						the city's history.
+						The bricks turned out to be fine. The building was not. Inside 235 East 42nd Street,
+						two columns were buckling and the floors above the 21st story had begun to sag. Workers
+						fled, then nine neighboring buildings, then a school of 400 children. The tower, once
+						Pfizer's headquarters, was being turned into 1,600 apartments, the largest office
+						conversion in the city's history.
 					</p>
 				</div>
 			</div>
