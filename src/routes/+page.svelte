@@ -1,0 +1,164 @@
+<script>
+	import Scroller from '$lib/components/Scroller.svelte';
+	import ConversionSkyline from '$lib/components/ConversionSkyline.svelte';
+
+	let index = $state(0);
+	let count = $state(0);
+</script>
+
+<main>
+	<header class="masthead">
+		<h1>The conversion that reached too high</h1>
+		<p class="dek">
+			New York has spent two decades turning empty offices into apartments — in ever bigger
+			buildings. On July 7, its most ambitious conversion yet began to buckle.
+		</p>
+		<p class="hint">Scroll ↓</p>
+	</header>
+
+	<Scroller top={0} bottom={1} bind:index bind:count>
+		{#snippet background()}
+			<ConversionSkyline {index} />
+		{/snippet}
+
+		{#snippet foreground()}
+			<div class="step">
+				<div class="card">
+					<h2>The buckle</h2>
+					<p>
+						Just before 8 a.m. on Tuesday, a safety manager at 235 East 42nd Street — the former
+						Pfizer headquarters, built in 1961 — reported a compromised steel beam on the 21st
+						floor. Two support columns were buckling; upper floors sagged. The tower was
+						mid-conversion into some 1,600 apartments, the largest office-to-residential
+						conversion in New York City history. A five-block "frozen zone" went up around
+						Grand Central.
+					</p>
+				</div>
+			</div>
+
+			<div class="step">
+				<div class="card">
+					<h2>It began downtown, old and narrow</h2>
+					<p>
+						Office-to-apartment conversion isn't new. The first wave, in the 1990s and 2000s,
+						took pre-war towers in Lower Manhattan — 90 West Street (1907), the Woolworth
+						Building (1913), 20 Pine (1928), 20 Exchange Place (1931), 70 Pine (1932). Old,
+						narrow buildings whose slim floor plates put every future bedroom near a window.
+						Most now list "residential" among their uses.
+					</p>
+				</div>
+			</div>
+
+			<div class="step">
+				<div class="card">
+					<h2>The new wave: Midtown, and bigger</h2>
+					<p>
+						After the pandemic emptied offices, the city rewrote the rules — 2024's City of Yes
+						rezoning, a new 467-m tax break, and an "Office Conversion Accelerator" at City
+						Hall. Half of conversions announced since then are in Midtown, and the buildings
+						keep getting bigger: 5 Times Square, 135 East 57th, and 750 Third Avenue, a
+						34-story office slab set to become 680 apartments.
+					</p>
+				</div>
+			</div>
+
+			<div class="step">
+				<div class="card">
+					<h2>This one reached too high</h2>
+					<p>
+						Unlike every downtown precedent, the 42nd Street project didn't just gut and refit —
+						it added weight: an 11-story extension on the adjoining 219 East 42nd Street, part
+						of the same complex. Under the new load, a union official said, beams bent "like
+						cigarettes." The developer conceded two columns "could not take the load." The
+						columns of a 64-year-old office tower were asked to carry a building it was never
+						designed to be.
+					</p>
+				</div>
+			</div>
+		{/snippet}
+	</Scroller>
+
+	<footer class="sources">
+		<p>
+			Sources: New York Times live coverage, July 7, 2026; Wall Street Journal, "Office-to-Residential
+			Conversions Are Booming," Dec. 1, 2025; NYC Office Conversion Accelerator; building data and
+			scale drawings from SkyscraperPage.com.
+		</p>
+	</footer>
+</main>
+
+<style>
+	main {
+		font-family: Georgia, 'Times New Roman', serif;
+		color: #26241f;
+	}
+
+	.masthead {
+		max-width: 42rem;
+		margin: 0 auto;
+		padding: 5rem 1.5rem 4rem;
+		text-align: center;
+	}
+
+	h1 {
+		margin: 0 0 1rem;
+		font-size: clamp(2rem, 5vw, 3rem);
+		line-height: 1.1;
+	}
+
+	.dek {
+		margin: 0 auto;
+		max-width: 34rem;
+		font-size: 1.15rem;
+		line-height: 1.5;
+		color: #55524b;
+	}
+
+	.hint {
+		margin-top: 2.5rem;
+		font-family: system-ui, sans-serif;
+		font-size: 0.8rem;
+		color: #8a857c;
+	}
+
+	.step {
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 0 clamp(1rem, 6vw, 5rem);
+	}
+
+	.card {
+		max-width: 22rem;
+		padding: 1.5rem 1.75rem;
+		background: rgb(255 253 248 / 0.96);
+		border: 1px solid #d8d2c4;
+		border-radius: 0.375rem;
+		box-shadow: 0 2px 14px rgb(0 0 0 / 0.08);
+	}
+
+	.card h2 {
+		margin: 0 0 0.6rem;
+		font-size: 1.15rem;
+	}
+
+	.card p {
+		margin: 0;
+		font-size: 0.95rem;
+		line-height: 1.6;
+	}
+
+	.sources {
+		max-width: 42rem;
+		margin: 0 auto;
+		padding: 3rem 1.5rem 4rem;
+	}
+
+	.sources p {
+		font-family: system-ui, sans-serif;
+		font-size: 0.75rem;
+		line-height: 1.5;
+		color: #8a857c;
+	}
+</style>
