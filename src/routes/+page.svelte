@@ -34,11 +34,11 @@
 				<div class="card">
 					<h2>The first call, just before 8 a.m. Tuesday, was about falling bricks</h2>
 					<p>
-						The bricks turned out to be fine. The building was not. Inside 235 East 42nd Street,
-						two columns were buckling and the floors above the 21st story had begun to sag. Workers
-						fled, then nine neighboring buildings, then a school of 400 children. The tower, once
-						Pfizer's headquarters, was being turned into 1,600 apartments, the largest office
-						conversion in the city's history.
+						No bricks had actually fallen, the buildings commissioner later said. But inside 235
+						East 42nd Street, two columns were buckling and the floors above the 21st story had
+						begun to sag. Workers fled, then nine neighboring buildings, then a school of 400
+						children. The tower, once Pfizer's headquarters, was being turned into 1,600
+						apartments, the largest office conversion in the city's history.
 					</p>
 				</div>
 			</div>
