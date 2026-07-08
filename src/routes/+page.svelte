@@ -55,7 +55,7 @@
 
 			<div class="step">
 				<div class="card">
-					<h2>The new wave moved to Midtown, and got bigger.</h2>
+					<h2>The new wave moved to Midtown.</h2>
 					<p>
 						Then the pandemic emptied Midtown, and the city rewrote its rules to fill it: looser
 						zoning, a tax break, an office at City Hall to hurry conversions along. Half the
