@@ -15,7 +15,7 @@
 		{#snippet foreground()}
 			<div class="step headline-step">
 				<header class="masthead">
-					<h1>The conversion that reached too high</h1>
+					<h1>The tower that couldn’t take the weight</h1>
 					<p class="dek">
 						New York has spent two decades turning empty offices into apartments — in ever bigger
 						buildings. On July 7, its most ambitious conversion yet began to buckle.
@@ -23,6 +23,9 @@
 					<p class="hint">Scroll ↓</p>
 				</header>
 			</div>
+
+			<!-- annotation beat: background draws the swoopy arrow; this step is a spacer -->
+			<div class="step" aria-hidden="true"></div>
 
 			<div class="step">
 				<div class="card">
@@ -108,11 +111,7 @@
 
 	.masthead {
 		max-width: 24rem;
-		padding: 1.25rem 1.5rem;
 		text-align: left;
-		background: rgb(245 242 236 / 0.7);
-		backdrop-filter: blur(2px);
-		border-radius: 0.5rem;
 	}
 
 	h1 {

@@ -7,14 +7,15 @@
 	let { index = 0 } = $props();
 
 	// Slide choreography:
-	// 0: headline (hero huge, alone) · 1: buckle (hero to scale) · 2: +downtown (active)
-	// 3: +midtown (active) · 4: hero active + schematic
-	const step = $derived(Math.max(0, Math.min(index, 4)));
-	const landing = $derived(step === 0);
+	// 0: headline (hero huge, alone) · 1: annotation (hero huge, swoopy arrow) · 2: buckle (hero to scale)
+	// 3: +downtown (active) · 4: +midtown (active) · 5: hero active + schematic
+	const step = $derived(Math.max(0, Math.min(index, 5)));
+	const landing = $derived(step <= 1);
+	const annotate = $derived(step === 1);
 	const introduced = $derived(
-		step <= 1 ? ['hero'] : step === 2 ? ['hero', 'downtown'] : ['hero', 'downtown', 'midtown']
+		step <= 2 ? ['hero'] : step === 3 ? ['hero', 'downtown'] : ['hero', 'downtown', 'midtown']
 	);
-	const active = $derived(['hero', 'hero', 'downtown', 'midtown', 'hero'][step]);
+	const active = $derived(['hero', 'hero', 'hero', 'downtown', 'midtown', 'hero'][step]);
 	const visible = $derived(buildings.filter((b) => introduced.includes(b.group)));
 
 	// Shared scale: all drawings ~0.305 px/ft, so raw h values are mutually to scale.
@@ -74,7 +75,7 @@
 					animate:flip={{ duration: 600 }}
 					transition:fade={{ duration: 400 }}
 				>
-					{#if b.group === 'hero' && step === 4}
+					{#if b.group === 'hero' && step === 5}
 						<div class="schematic" style:height="{(NEIGHBOR_RAW + EXTENSION_RAW) * k}px">
 							<div class="ghost" style:height="{EXTENSION_RAW * k}px">+11 floors</div>
 							<div class="neighbor" style:height="{NEIGHBOR_RAW * k}px">
@@ -84,7 +85,19 @@
 					{/if}
 					<div class="tower">
 						<img src={b.file} alt="Scale drawing of {b.name}" style:height="{displayH(b)}px" />
-						{#if b.group === 'hero' && step === 4}
+						{#if b.group === 'hero' && annotate}
+							<div class="annotation" transition:fade={{ duration: 300 }}>
+								<p>
+									this one — the old <strong>Pfizer HQ</strong>, now briefly famous as
+									<strong>“the building that might collapse”</strong>
+								</p>
+								<svg viewBox="0 0 130 90" aria-hidden="true">
+									<path class="swoop" d="M6,8 C 14,58 58,84 112,56" />
+									<path class="head" d="M100,50 L114,55 L104,66" />
+								</svg>
+							</div>
+						{/if}
+						{#if b.group === 'hero' && step === 5}
 							<div class="buckle" style:bottom="{BUCKLE_FRAC * b.h * k}px">
 								<span>beam compromised — 21st floor</span>
 							</div>
@@ -189,6 +202,63 @@
 		display: block;
 		color: #c0392b;
 		font-weight: 600;
+	}
+
+	.annotation {
+		position: absolute;
+		right: calc(100% + 1.25rem);
+		top: 18%;
+		width: 15rem;
+		text-align: right;
+		font-family: 'Caveat', cursive;
+		font-size: 1.5rem;
+		font-weight: 600;
+		line-height: 1.15;
+		color: #b03427;
+		transform: rotate(-3deg);
+	}
+
+	.annotation p {
+		margin: 0 0 0.25rem;
+	}
+
+	.annotation svg {
+		width: 7.5rem;
+		height: auto;
+		margin-right: 0.5rem;
+		overflow: visible;
+	}
+
+	.annotation .swoop {
+		fill: none;
+		stroke: #b03427;
+		stroke-width: 3;
+		stroke-linecap: round;
+		stroke-dasharray: 220;
+		stroke-dashoffset: 220;
+		animation: draw 800ms ease-out 250ms forwards;
+	}
+
+	.annotation .head {
+		fill: none;
+		stroke: #b03427;
+		stroke-width: 3;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		opacity: 0;
+		animation: pop 200ms ease-out 950ms forwards;
+	}
+
+	@keyframes draw {
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
+
+	@keyframes pop {
+		to {
+			opacity: 1;
+		}
 	}
 
 	.buckle {
