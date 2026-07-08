@@ -19,7 +19,7 @@ CAST = [
     ("3149",  {"year": 1907, "floors": 23, "height_ft": 325, "uses": "residential",          "group": "downtown"}),  # 90 West
     ("832",   {"year": 1913, "floors": 57, "height_ft": 792, "uses": "mixed, incl. residential", "group": "downtown"}),  # Woolworth
     ("17171", {"year": 1928, "floors": 38, "height_ft": 495, "uses": "residential",          "group": "downtown"}),  # 20 Pine
-    ("231",   {"year": 1931, "floors": 57, "height_ft": 846, "uses": "office (converted)",   "group": "downtown"}),  # 20 Exchange
+    ("231",   {"year": 1931, "floors": 57, "height_ft": 748, "uses": "office (converted)",   "group": "downtown"}),  # 20 Exchange (748 = antenna; 846 was never-built "intended height")
     ("131",   {"year": 1932, "floors": 67, "height_ft": 952, "uses": "mixed, incl. residential", "group": "downtown"}),  # 70 Pine
     ("10262", {"year": 1958, "floors": 34, "height_ft": 436, "uses": "office → 680 apts (2029)", "group": "midtown"},),  # 750 Third
     ("7409",  {"year": 1988, "floors": 31, "height_ft": 430, "uses": "office → residential", "group": "midtown"}),  # 135 E 57th
@@ -27,7 +27,8 @@ CAST = [
     ("42701", {"year": 1961, "floors": 33, "height_ft": 409, "uses": "office → ~1,600 apts", "group": "hero"}),      # Pfizer / 235 E 42nd
 ]
 
-rows = {r["buildingID"]: r for r in csv.DictReader(open(CSV, encoding="utf-8"))}
+with open(CSV, encoding="utf-8") as f:
+    rows = {r["buildingID"]: r for r in csv.DictReader(f)}
 out = []
 for bid, facts in CAST:
     if bid not in rows:
@@ -46,6 +47,12 @@ for bid, facts in CAST:
         "illustrator": r["illustrator"],
         **facts,
     })
+
+# Guard the to-scale invariant the whole graphic depends on (~0.305 px/ft)
+for b in out:
+    ratio = b["h"] / b["height_ft"]
+    if not 0.29 <= ratio <= 0.32:
+        sys.exit(f"FATAL: {b['name']} breaks scale: {b['h']}px / {b['height_ft']}ft = {ratio:.3f} px/ft")
 
 STATIC_OUT.mkdir(parents=True, exist_ok=True)
 for b in out:

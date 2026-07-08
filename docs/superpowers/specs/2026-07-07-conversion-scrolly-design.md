@@ -10,31 +10,31 @@ apartments — the largest office-to-residential conversion in NYC history) buck
 21st-floor beam, two buckling columns, a five-block "frozen zone" around Grand Central.
 
 Argument, one beat per slide: conversions started downtown in old, narrow towers → the post-pandemic
-wave moved to Midtown and got bigger → this project alone grew *upward*, adding 11 floors to the
+wave moved to Midtown and got bigger → this project alone grew _upward_, adding 11 floors to the
 adjoining 219 E 42nd — and that new load is what failed.
 
 ## The four slides
 
-| # | Beat | Graphic state |
-|---|------|---------------|
-| 1 | **The buckle.** 235 E 42nd, 1961, was being converted to ~1,600 apartments — largest in NYC history. This morning its columns buckled. | Hero illustration alone, annotated (409 ft · 1961 · office → residential) |
-| 2 | **It began downtown, old and narrow.** First conversion wave (1990s–2000s): 90 West (1907), Woolworth (1913), 20 Pine (1928), 20 Exchange (1931), 70 Pine (1932). SkyscraperPage's `use` field already lists most as residential/mixed. | Downtown five enter to scale; hero dims |
-| 3 | **The new wave: Midtown, and bigger.** Post-pandemic, half of announced conversions are in Midtown — 5 Times Square, 135 E 57th, 750 Third — pushed by City of Yes (2024), the 467-m tax break, and the city's Office Conversion Accelerator. | Midtown trio enters highlighted; downtown five dim |
-| 4 | **This one reached too high.** Unlike every precedent, this project added floors — an 11-story extension on the adjoining 219 E 42nd. Under that new load, two columns bent and the floors sagged. | All dim except hero; ghost-extension schematic beside hero + buckle marker at the 21st floor |
+| #   | Beat                                                                                                                                                                                                                                          | Graphic state                                                                                |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| 1   | **The buckle.** 235 E 42nd, 1961, was being converted to ~1,600 apartments — largest in NYC history. This morning its columns buckled.                                                                                                        | Hero illustration alone, annotated (409 ft · 1961 · office → residential)                    |
+| 2   | **It began downtown, old and narrow.** First conversion wave (1990s–2000s): 90 West (1907), Woolworth (1913), 20 Pine (1928), 20 Exchange (1931), 70 Pine (1932). SkyscraperPage's `use` field already lists most as residential/mixed.       | Downtown five enter to scale; hero dims                                                      |
+| 3   | **The new wave: Midtown, and bigger.** Post-pandemic, half of announced conversions are in Midtown — 5 Times Square, 135 E 57th, 750 Third — pushed by City of Yes (2024), the 467-m tax break, and the city's Office Conversion Accelerator. | Midtown trio enters highlighted; downtown five dim                                           |
+| 4   | **This one reached too high.** Unlike every precedent, this project added floors — an 11-story extension on the adjoining 219 E 42nd. Under that new load, two columns bent and the floors sagged.                                            | All dim except hero; ghost-extension schematic beside hero + buckle marker at the 21st floor |
 
 ## Cast (from scrape/buildings.csv; illustrations on disk)
 
-| Building | buildingID | drawingID | px (w×h) | Year | Ht (ft) | Group |
-|---|---|---|---|---|---|---|
-| Pfizer Building (235 E 42nd) | 42701 | 71359 | 70×125 | 1961 | 409 | hero |
-| 90 West Street | 3149 | 36624 | 71×99 | 1907 | 325 | downtown |
-| Woolworth Building | 832 | 74220 | 84×241 | 1913 | 792 | downtown |
-| 20 Pine | 17171 | 33086 | 67×151 | 1928 | 495 | downtown |
-| 20 Exchange Place | 231 | 4166 | 66×228 | 1931 | 846 | downtown |
-| 70 Pine Street | 131 | 74456 | 96×290 | 1932 | 952 | downtown |
-| 5 Times Square | 5279 | 74028 | 67×175 | 2002 | 574 | midtown |
-| 135 East 57th Street | 7409 | 28644 | 67×131 | 1988 | 430 | midtown |
-| 750 Third Avenue | 10262 | 32970 | 85×133 | 1958 | 436 | midtown |
+| Building                     | buildingID | drawingID | px (w×h) | Year | Ht (ft) | Group    |
+| ---------------------------- | ---------- | --------- | -------- | ---- | ------- | -------- |
+| Pfizer Building (235 E 42nd) | 42701      | 71359     | 70×125   | 1961 | 409     | hero     |
+| 90 West Street               | 3149       | 36624     | 71×99    | 1907 | 325     | downtown |
+| Woolworth Building           | 832        | 74220     | 84×241   | 1913 | 792     | downtown |
+| 20 Pine                      | 17171      | 33086     | 67×151   | 1928 | 495     | downtown |
+| 20 Exchange Place            | 231        | 4166      | 66×228   | 1931 | 748     | downtown |
+| 70 Pine Street               | 131        | 74456     | 96×290   | 1932 | 952     | downtown |
+| 5 Times Square               | 5279       | 74028     | 67×175   | 2002 | 574     | midtown  |
+| 135 East 57th Street         | 7409       | 28644     | 67×131   | 1988 | 430     | midtown  |
+| 750 Third Avenue             | 10262      | 32970     | 85×133   | 1958 | 436     | midtown  |
 
 All years/heights verified against SkyscraperPage detail pages; illustrations verified on disk.
 
@@ -51,13 +51,14 @@ src/routes/+page.svelte              Scroller wiring + step prose
 ```
 
 **ConversionSkyline.svelte** — props: `index`, `count` (from Scroller bindables).
+
 - Lays the 9 buildings on a shared baseline (flex row, align-end), each `<img>` height = `img_height × k`.
   `k` derived from container height so the tallest (70 Pine, 290px) fits with headroom.
 - Per-slide state via `$derived` from `index`: which group is `active` (full opacity + label) vs
   `dimmed` (low opacity, grayscale). Buildings not yet introduced are hidden
   (`{#if}` + keyed `{#each}` with `transition:fade`).
 - Slide 4 extras, drawn as an SVG overlay anchored to the hero:
-  - **Ghost extension:** dashed translucent block *beside* the hero, labeled
+  - **Ghost extension:** dashed translucent block _beside_ the hero, labeled
     "11-floor extension — 219 E 42nd (adjoining, not pictured)". Never drawn on top of the
     hero illustration — the extension is on the neighboring structure (per NYT diagram).
   - **Buckle marker:** line + label at 21/37 of hero height ("beam compromised, 21st floor").

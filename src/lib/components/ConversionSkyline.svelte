@@ -18,8 +18,6 @@
 	const TALLEST = Math.max(...buildings.map((b) => b.h)); // 290px (70 Pine)
 	const k = $derived(containerH > 0 ? (containerH * 0.58) / TALLEST : 0);
 
-	const hero = buildings.find((b) => b.group === 'hero');
-
 	// Slide-4 schematic, same raw-px scale as the drawings:
 	// 219 E 42nd (adjoining): 22 existing floors ≈ 275 ft ≈ 84px; extension +11 floors ≈ 138 ft ≈ 42px
 	const NEIGHBOR_RAW = 84;
