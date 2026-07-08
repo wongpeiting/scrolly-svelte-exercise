@@ -4,7 +4,7 @@
 	import { flip } from 'svelte/animate';
 	import { tick } from 'svelte';
 
-	let { index = 0, masthead } = $props();
+	let { index = 0, offset = 0, masthead } = $props();
 
 	// Slide choreography:
 	// 0: headline (hero huge, alone) · 1: annotation (hero huge, swoopy arrow) · 2: buckle (hero to scale)
@@ -25,11 +25,20 @@
 
 	// The hero never unmounts: huge on the headline screens, shrunk to the shared
 	// scale mid-story, then zoomed back up for the final step so we end on it.
+	// Shrink (step 2) and regrowth (step 5) are scroll-scrubbed: they interpolate
+	// with the section's offset so the size tracks the reader's scroll speed.
+	const ease = (t) => t * t * (3 - 2 * t);
+	const clamp01 = (t) => Math.max(0, Math.min(1, t));
+	const shrinkP = $derived(step < 2 ? 0 : step === 2 ? ease(clamp01(offset / 0.5)) : 1);
+	const zoomP = $derived(step === 5 ? ease(clamp01(offset / 0.6)) : 0);
 	const displayH = (b) => {
 		if (b.group !== 'hero') return b.h * k;
-		if (landing) return containerH * 0.72;
-		if (step === 5) return containerH * 0.66;
-		return b.h * k;
+		const landingH = containerH * 0.72;
+		const scaleH = b.h * k;
+		if (step <= 1) return landingH;
+		if (step === 2) return landingH + (scaleH - landingH) * shrinkP;
+		if (step === 5) return scaleH + (containerH * 0.66 - scaleH) * zoomP;
+		return scaleH;
 	};
 	// Effective px per raw drawing px, so hero-anchored overlays scale with the zoom.
 	const scaleFor = (b) => displayH(b) / b.h;
@@ -65,9 +74,11 @@
 		void step;
 		void stageW;
 		void k;
+		void shrinkP;
+		void zoomP;
 		tick().then(measure);
-		// Re-measure after the 700ms height transition settles (hero zoom changes layout).
-		const t = setTimeout(measure, 780);
+		// Re-measure after entry/exit transitions settle (fades change layout).
+		const t = setTimeout(measure, 500);
 		return () => clearTimeout(t);
 	});
 </script>
@@ -193,7 +204,7 @@
 		display: block;
 		width: auto;
 		image-rendering: pixelated;
-		transition: height 700ms cubic-bezier(0.4, 0, 0.2, 1);
+		transition: height 150ms ease-out;
 	}
 
 	.hero .tower img {

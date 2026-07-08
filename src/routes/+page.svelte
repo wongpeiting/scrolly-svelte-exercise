@@ -4,12 +4,13 @@
 
 	let index = $state(0);
 	let count = $state(0);
+	let offset = $state(0);
 </script>
 
 <main>
-	<Scroller top={0} bottom={1} bind:index bind:count>
+	<Scroller top={0} bottom={1} bind:index bind:count bind:offset>
 		{#snippet background()}
-			<ConversionSkyline {index}>
+			<ConversionSkyline {index} {offset}>
 				{#snippet masthead()}
 					<header class="masthead">
 						<h1>The tower that couldn’t take the weight</h1>
@@ -36,8 +37,8 @@
 					<p>
 						No bricks had actually fallen, the buildings commissioner later said. But inside 235
 						East 42nd Street, two columns were buckling and the floors above the 21st story had
-						begun to sag. Workers fled, and the city emptied nine neighboring buildings and a
-						school of 400 children.
+						begun to sag. Workers fled, and the city emptied nine neighboring buildings and a school
+						of 400 children.
 					</p>
 				</div>
 			</div>
@@ -68,11 +69,11 @@
 				<div class="card">
 					<h2>Then this one buckled.</h2>
 					<p>
-						The 42nd Street project went further than any of them. It added weight: an 11-story
-						extension on the adjoining 219 East 42nd, part of the same complex. On Tuesday, the load
-						told. A union official said beams bent "like cigarettes". The developer admitted two
-						columns "could not take the load". A 64-year-old frame was carrying a building it was
-						never designed to be. Across Manhattan, 25 more conversions are on the drawing board.
+						The 42nd Street project went further than the earlier conversions. The plan added an
+						11-story extension on the adjoining 219 East 42nd, part of the same complex, and on
+						Tuesday the added weight proved too much. A union official said beams bent "like
+						cigarettes". The developer admitted two columns "could not take the load". Across
+						Manhattan, 25 more office conversions are on the drawing board.
 					</p>
 				</div>
 			</div>
