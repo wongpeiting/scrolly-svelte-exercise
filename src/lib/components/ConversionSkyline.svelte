@@ -56,7 +56,9 @@
 		if (!actives.length) return;
 		let sum = 0;
 		for (const el of actives) sum += el.offsetLeft + el.offsetWidth / 2;
-		shiftX = stageW / 2 - sum / actives.length;
+		// Final step: bias right so the zoomed hero centers in the space beside the card.
+		const targetFrac = step === 5 ? 0.63 : 0.5;
+		shiftX = stageW * targetFrac - sum / actives.length;
 	}
 
 	$effect(() => {
