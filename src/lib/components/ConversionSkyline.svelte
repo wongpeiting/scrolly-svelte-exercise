@@ -225,6 +225,11 @@
 
 	figcaption .use {
 		display: block;
+		width: max-content;
+		white-space: nowrap;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
 		color: #c0392b;
 		font-weight: 600;
 	}
