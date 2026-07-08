@@ -4,7 +4,7 @@
 	import { flip } from 'svelte/animate';
 	import { tick } from 'svelte';
 
-	let { index = 0 } = $props();
+	let { index = 0, masthead } = $props();
 
 	// Slide choreography:
 	// 0: headline (hero huge, alone) · 1: annotation (hero huge, swoopy arrow) · 2: buckle (hero to scale)
@@ -60,6 +60,11 @@
 </script>
 
 <div class="stage" bind:clientHeight={containerH} bind:clientWidth={stageW}>
+	{#if landing && masthead}
+		<div class="masthead-slot" transition:fade={{ duration: 400 }}>
+			{@render masthead()}
+		</div>
+	{/if}
 	{#if k > 0}
 		<div
 			class="skyline"
@@ -88,12 +93,12 @@
 						{#if b.group === 'hero' && annotate}
 							<div class="annotation" transition:fade={{ duration: 300 }}>
 								<p>
-									this one — the old <strong>Pfizer HQ</strong>, now briefly famous as
+									this tower — the old <strong>Pfizer HQ</strong>, known since this morning as
 									<strong>“the building that might collapse”</strong>
 								</p>
 								<svg viewBox="0 0 130 90" aria-hidden="true">
-									<path class="swoop" d="M6,8 C 14,58 58,84 112,56" />
-									<path class="head" d="M100,50 L114,55 L104,66" />
+									<path class="swoop" d="M124,8 C 116,58 72,84 18,56" />
+									<path class="head" d="M30,50 L16,55 L26,66" />
 								</svg>
 							</div>
 						{/if}
@@ -119,12 +124,21 @@
 
 <style>
 	.stage {
+		position: relative;
 		height: 100vh;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
 		background: linear-gradient(#f5f2ec, #ece7dd);
 		overflow: hidden;
+	}
+
+	.masthead-slot {
+		position: absolute;
+		left: clamp(1rem, 6vw, 5rem);
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 1;
 	}
 
 	.skyline {
@@ -206,16 +220,16 @@
 
 	.annotation {
 		position: absolute;
-		right: calc(100% + 1.25rem);
+		left: calc(100% + 1.25rem);
 		top: 18%;
 		width: 15rem;
-		text-align: right;
+		text-align: left;
 		font-family: 'Caveat', cursive;
 		font-size: 1.5rem;
 		font-weight: 600;
 		line-height: 1.15;
 		color: #b03427;
-		transform: rotate(-3deg);
+		transform: rotate(2.5deg);
 	}
 
 	.annotation p {
@@ -225,7 +239,7 @@
 	.annotation svg {
 		width: 7.5rem;
 		height: auto;
-		margin-right: 0.5rem;
+		margin-left: 0.5rem;
 		overflow: visible;
 	}
 

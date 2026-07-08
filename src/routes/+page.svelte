@@ -9,20 +9,23 @@
 <main>
 	<Scroller top={0} bottom={1} bind:index bind:count>
 		{#snippet background()}
-			<ConversionSkyline {index} />
+			<ConversionSkyline {index}>
+				{#snippet masthead()}
+					<header class="masthead">
+						<h1>The tower that couldn’t take the weight</h1>
+						<p class="dek">
+							New York has spent two decades turning empty offices into apartments — in ever bigger
+							buildings. On July 7, its most ambitious conversion yet began to buckle.
+						</p>
+						<p class="hint">Scroll ↓</p>
+					</header>
+				{/snippet}
+			</ConversionSkyline>
 		{/snippet}
 
 		{#snippet foreground()}
-			<div class="step headline-step">
-				<header class="masthead">
-					<h1>The tower that couldn’t take the weight</h1>
-					<p class="dek">
-						New York has spent two decades turning empty offices into apartments — in ever bigger
-						buildings. On July 7, its most ambitious conversion yet began to buckle.
-					</p>
-					<p class="hint">Scroll ↓</p>
-				</header>
-			</div>
+			<!-- headline beat: masthead lives in the background so it stays put -->
+			<div class="step" aria-hidden="true"></div>
 
 			<!-- annotation beat: background draws the swoopy arrow; this step is a spacer -->
 			<div class="step" aria-hidden="true"></div>
@@ -102,11 +105,6 @@
 		align-items: center;
 		justify-content: flex-start;
 		padding: 0 clamp(1rem, 6vw, 5rem);
-	}
-
-	.headline-step {
-		align-items: center;
-		justify-content: flex-start;
 	}
 
 	.masthead {
