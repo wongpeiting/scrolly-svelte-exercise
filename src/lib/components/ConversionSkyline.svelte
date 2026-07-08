@@ -1,5 +1,6 @@
 <script>
 	import buildings from '$lib/data/conversions.json';
+	import { base } from '$app/paths';
 	import { fade } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
 	import { tick } from 'svelte';
@@ -113,7 +114,7 @@
 						</div>
 					{/if}
 					<div class="tower">
-						<img src={b.file} alt="Scale drawing of {b.name}" style:height="{displayH(b)}px" />
+						<img src="{base}{b.file}" alt="Scale drawing of {b.name}" style:height="{displayH(b)}px" />
 						{#if b.group === 'hero' && annotate}
 							<div class="annotation" transition:fade={{ duration: 300 }}>
 								<p>
