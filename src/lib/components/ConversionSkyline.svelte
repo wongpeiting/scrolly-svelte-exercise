@@ -104,7 +104,7 @@
 						{#if b.group === 'hero' && annotate}
 							<div class="annotation" transition:fade={{ duration: 300 }}>
 								<p>
-									as of this morning, this old <strong>Pfizer HQ</strong> became the
+									as of this morning, this <strong>ex-Pfizer HQ</strong> became the
 									<strong>‘building that might collapse’</strong>
 								</p>
 								<svg viewBox="0 0 130 90" aria-hidden="true">
@@ -236,7 +236,7 @@
 
 	.annotation {
 		position: absolute;
-		left: calc(100% + 1.25rem);
+		left: calc(100% + 0.4rem);
 		top: 18%;
 		width: 15rem;
 		text-align: left;
@@ -255,7 +255,7 @@
 	.annotation svg {
 		width: 7.5rem;
 		height: auto;
-		margin-left: 0.5rem;
+		margin-left: 0;
 		overflow: visible;
 	}
 
