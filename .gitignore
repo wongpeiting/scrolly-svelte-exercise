@@ -24,3 +24,8 @@ vite.config.ts.timestamp-*
 
 
 .helpers/
+# Project docs and scraped data (local only)
+docs/
+scrape/
+.superpowers/
+__pycache__/
