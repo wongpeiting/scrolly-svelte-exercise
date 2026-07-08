@@ -236,7 +236,7 @@
 
 	.annotation {
 		position: absolute;
-		left: calc(100% + 0.4rem);
+		left: calc(100% + 0.1rem);
 		top: 18%;
 		width: 15rem;
 		text-align: left;
