@@ -36,8 +36,8 @@
 					<p>
 						No bricks had actually fallen, the buildings commissioner later said. But inside 235
 						East 42nd Street, two columns were buckling and the floors above the 21st story had
-						begun to sag. Workers fled, then nine neighboring buildings, then a school of 400
-						children.
+						begun to sag. Workers fled, and the city emptied nine neighboring buildings and a
+						school of 400 children.
 					</p>
 				</div>
 			</div>
