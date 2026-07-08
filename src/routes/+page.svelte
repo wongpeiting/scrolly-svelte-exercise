@@ -44,12 +44,11 @@
 
 			<div class="step">
 				<div class="card">
-					<h2>Conversions started downtown</h2>
+					<h2>Conversions started downtown.</h2>
 					<p>
 						The first wave in the 1990s and 2000s took the old towers of Lower Manhattan: 90 West
 						Street, the Woolworth Building, 20 Pine, 20 Exchange Place, 70 Pine. All built between
-						1907 and 1932, and narrow enough that every future bedroom sat near a window. The
-						formula held for two decades: pick something old, slim and empty.
+						1907 and 1932, and narrow enough that every future bedroom sat near a window.
 					</p>
 				</div>
 			</div>
