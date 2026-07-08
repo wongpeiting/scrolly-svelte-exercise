@@ -71,8 +71,9 @@
 					<p>
 						The 42nd Street project went further than the earlier conversions. The plan added an
 						11-story extension on the adjoining 219 East 42nd, part of the same complex, and on
-						Tuesday the added weight proved too much. A union official said beams bent "like
-						cigarettes". The developer admitted two columns "could not take the load".
+						Tuesday the added weight proved too much. A union official had told The New York Times
+						that beams bent "like cigarettes", and the developer admitted two columns "could not
+						take the load".
 					</p>
 				</div>
 			</div>
