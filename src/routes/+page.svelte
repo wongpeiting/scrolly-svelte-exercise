@@ -32,7 +32,7 @@
 
 			<div class="step">
 				<div class="card">
-					<h2>The first call, just before 8 a.m. Tuesday, was about falling bricks</h2>
+					<h2>The first call, just before 8 a.m. Tuesday, was about falling bricks.</h2>
 					<p>
 						No bricks had actually fallen, the buildings commissioner later said. But inside 235
 						East 42nd Street, two columns were buckling and the floors above the 21st story had
