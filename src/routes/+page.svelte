@@ -66,7 +66,7 @@
 
 			<div class="step">
 				<div class="card">
-					<h2>The buckle</h2>
+					<h2>Then this one buckled.</h2>
 					<p>
 						The 42nd Street project went further than any of them. It added weight: an 11-story
 						extension on the adjoining 219 East 42nd, part of the same complex. On Tuesday, the load
