@@ -310,6 +310,7 @@
 		left: -0.5rem;
 		right: -0.5rem;
 		border-top: 2px dashed #c0392b;
+		transition: bottom 150ms ease-out;
 	}
 
 	.buckle span {
@@ -333,6 +334,13 @@
 		font-size: 0.65rem;
 		text-align: center;
 		color: #3d3a35;
+	}
+
+	/* Match .tower img so the schematic tracks the hero's height easing. */
+	.schematic,
+	.schematic .neighbor,
+	.schematic .ghost {
+		transition: height 150ms ease-out;
 	}
 
 	.schematic .neighbor {
