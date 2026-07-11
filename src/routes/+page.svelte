@@ -15,8 +15,9 @@
 					<header class="masthead">
 						<h1>The tower that couldn’t take the weight</h1>
 						<p class="dek">
-							New York has spent two decades turning empty offices into apartments, in ever bigger
-							buildings. On July 7, its most ambitious conversion yet began to buckle.
+							For two decades, New York has been turning its empty offices into apartments, and
+							each wave of conversions has been more ambitious than the last. On July 7, the
+							boldest of them began to buckle.
 						</p>
 						<p class="hint">Scroll ↓</p>
 					</header>
@@ -35,46 +36,48 @@
 				<div class="card">
 					<h2>The first call, just before 8 a.m. Tuesday, was about falling bricks.</h2>
 					<p>
-						No bricks had actually fallen, the buildings commissioner later said. But inside 235
-						East 42nd Street, two columns were buckling and the floors above the 21st story had
-						begun to sag. Workers fled, and the city emptied nine neighboring buildings and a school
-						of 400 children.
+						No bricks had fallen, the buildings commissioner said later. The truth was worse.
+						Inside 235 East 42nd Street, two columns were buckling, and the floors above the 21st
+						story had begun to sag. Workers fled. By midmorning, the city had emptied nine
+						neighboring buildings and a school of 400 children.
 					</p>
 				</div>
 			</div>
 
 			<div class="step">
 				<div class="card">
-					<h2>Conversions started downtown.</h2>
+					<h2>New York had done this before — and it had worked.</h2>
 					<p>
-						The first wave in the 1990s and 2000s took the old towers of Lower Manhattan: 90 West
-						Street, the Woolworth Building, 20 Pine, 20 Exchange Place, 70 Pine. All built between
-						1907 and 1932, and narrow enough that every future bedroom sat near a window.
+						The first wave of conversions, in the 1990s and 2000s, took the old towers of Lower
+						Manhattan: 90 West Street, the Woolworth Building, 20 Pine, 20 Exchange Place, 70
+						Pine. All were built between 1907 and 1932, and all were slender by modern standards —
+						so slender that every future bedroom sat near a window. The old towers made natural
+						apartments.
 					</p>
 				</div>
 			</div>
 
 			<div class="step">
 				<div class="card">
-					<h2>The new wave moved to Midtown.</h2>
+					<h2>Then the pandemic emptied Midtown, and the city rewrote its rules.</h2>
 					<p>
-						Then the pandemic emptied Midtown, and the city rewrote its rules to fill it: looser
-						zoning, a tax break, an office at City Hall to hurry conversions along. Half the
-						projects announced since are in Midtown, according to a Wall Street Journal analysis of
-						Cushman & Wakefield data, and they keep getting bigger.
+						Looser zoning, a new tax break, an office at City Hall to hurry projects along — all
+						of it designed to refill a hollowed-out office district with residents. It worked.
+						Half the conversions announced since have been in Midtown, according to a Wall Street
+						Journal analysis of Cushman & Wakefield data. And the projects kept getting bigger.
 					</p>
 				</div>
 			</div>
 
 			<div class="step">
 				<div class="card">
-					<h2>Then this one buckled.</h2>
+					<h2>The Pfizer Building went further than conversion.</h2>
 					<p>
-						The 42nd Street project went further than the earlier conversions. The plan added an
-						11-story extension on the adjoining 219 East 42nd, part of the same complex, and on
-						Tuesday the added weight proved too much. A union official had told The New York Times
-						that beams bent "like cigarettes", and the developer admitted two columns "could not
-						take the load".
+						The plan for the drugmaker’s former headquarters called for about 1,600 apartments —
+						and an 11-story extension stacked atop 219 East 42nd Street, the adjoining building in
+						the complex. On Tuesday, the added weight proved too much. Beams bent “like
+						cigarettes,” a union official told The New York Times. Two columns, the developer
+						conceded, simply “could not take the load.”
 					</p>
 				</div>
 			</div>
